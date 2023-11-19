@@ -3,7 +3,7 @@ import { useCookies } from "react-cookie"
 import axios from "axios"
 import { url } from "../const"
 import { Header } from "../components/Header"
-import "./newTask.css"
+import "./newTask.scss"
 import { useNavigate } from "react-router-dom"
 
 export const NewTask = () => {
@@ -65,8 +65,7 @@ export const NewTask = () => {
 					<br />
 					<select
 						onChange={(e) => handleSelectList(e.target.value)}
-						className="new-task-select-list"
-					>
+						className="new-task-select-list">
 						{lists.map((list, key) => (
 							<option key={key} className="list-item" value={list.id}>
 								{list.title}
